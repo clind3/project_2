@@ -29,7 +29,6 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/seePost', async (req, res) => {
-    findRestList('columbus', 'bar');
     Post.findAll({
         attributes: [
             'location',
@@ -57,10 +56,10 @@ router.get('/login', async (req, res) => {
     
 });
 
-router.get('/post', async (req, res) => {
-    res.render('post');
+// router.get('/post', async (req, res) => {
+//     res.render('post');
     
-});
+// });
 
 module.exports = { router, findRestList};
 

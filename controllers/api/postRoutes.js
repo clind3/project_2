@@ -2,19 +2,45 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
-  console.log(req.body);
-  console.log(req.session.sid);
-  try {
-      const postData = await Post.create({
-        ...req.body
-      // user_id: req.session.user_id 
-      });
-      res.status(200).json(postData);
-    } catch (err) {
-      console.log('ISSUES!')
-      res.status(400).json(err);
-    }
-  });
+  let { location, stars, crowded, masks, entertainment, specials, quality, addComment } = req.body;
+  let errors = [];
 
-  
-  module.exports = router
+  //Validation Fields
+  if (!location) {
+    errors.push({ text: 'Please select a location' });
+  }
+  if (!stars && !crowded && !masks && !entertainment && !specials && !quality && !addComment) {
+    errors.push({ text: 'Please enter atleast one review value' });
+  }
+
+  //Check for errors
+  if (errors.length > 0) {
+    res.render('post', {
+      errors,
+      location, 
+      stars, 
+      crowded, 
+      masks, 
+      entertainment, 
+      specials, 
+      quality, 
+      addComment
+    })
+  } else {
+    Post.create({
+      location,
+      starts,
+      crowded,
+      masks,
+      entertainment,
+      specials,
+      quality,
+      addComment
+    })
+      .then(post => res.redirect('/seePost'))
+      .catch(err => console.log(err));
+  }
+
+})
+
+module.exports = router

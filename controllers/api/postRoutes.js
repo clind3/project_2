@@ -5,11 +5,13 @@ router.post('/', async (req, res) => {
   let { location, stars, crowded, masks, entertainment, specials, quality, addComment } = req.body;
   let errors = [];
 
+  console.log(location);
+
   //Validation Fields
-  if (!location) {
+  if (location=='null') {
     errors.push({ text: 'Please select a location' });
   }
-  if (!stars && !crowded && !masks && !entertainment && !specials && !quality && !addComment) {
+  if (stars=='null' && crowded=='null' && masks=='null' && entertainment=='null' && specials=='null' && quality=='null' && !addComment) {
     errors.push({ text: 'Please enter atleast one review value' });
   }
 
@@ -25,11 +27,11 @@ router.post('/', async (req, res) => {
       specials, 
       quality, 
       addComment
-    })
+    });
   } else {
     Post.create({
       location,
-      starts,
+      stars,
       crowded,
       masks,
       entertainment,

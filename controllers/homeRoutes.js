@@ -56,10 +56,10 @@ router.get('/login', async (req, res) => {
     
 });
 
-// router.get('/post', async (req, res) => {
-//     res.render('post');
+router.get('/post', async (req, res) => {
+    res.render('post');
     
-// });
+});
 
 module.exports = { router, findRestList};
 

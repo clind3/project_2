@@ -25,23 +25,23 @@
     <form action='/api/users' method='POST' class="form signup-form">
       <div class="form-group">
         <label for="username-signup">User Name:</label>
-        <input class="form-input" placeholder="jsmith232"  type="text" id="username" value={{username}}>
+        <input name='username' class="form-input" placeholder="jsmith232"  type="text" id="username-signup" value={{username}}>
       </div>
       <div class="form-group">
         <label for="first-name-signup">First Name</label>
-        <input class="form-input" placeholder="John"  type="text" id="first_name" value={{first_name}}>
+        <input name='first_name' class="form-input" placeholder="John"  type="text" id="first-name-signup" value={{first_name}}>
       </div>
       <div class="form-group">
         <label for="last-name-signup">Last Name</label>
-        <input class="form-input" placeholder="Smith"  type="text" id="last_name" value={{last_name}}>
+        <input name='last_name' class="form-input" placeholder="Smith"  type="text" id="last-name-signup" value={{last_name}}>
       </div>
       <div class="form-group">
         <label for="email-signup">Email:</label>
-        <input class="form-input" placeholder="smith.john@email.com"  type="email" id="email" value={{email}}>
+        <input name='email' class="form-input" placeholder="smith.john@email.com"  type="email" id="email-signup" value={{email}}>
       </div>
       <div class="form-group">
         <label for="password-signup">Password</label>
-        <input class="form-input" type="password" id="pw" />
+        <input name='pw' class="form-input" type="password" id="password-signup" />
       </div>
       <div class="form-group">
         <button type="submit" class="btn" >Sign Up</button>

@@ -11,7 +11,7 @@
       <div>
         <label>Which business?</label>
       </div>
-      <select class="form-select" id="location">
+      <select name='location' class="form-select" id="location">
         <option value=null>---Choose Option----</option>
         <option>Terrace Bar</option>
         <option>Sacred Palm</option>
@@ -23,7 +23,7 @@
       <div>
         <label>Stars?</label>
       </div>
-      <select class="form-select" id="stars">
+      <select name='stars' class="form-select" id="stars">
         <option value=null>---Choose Option----</option>
         <option>5</option>
         <option>4</option>
@@ -36,7 +36,7 @@
       <div>
         <label>Is this location crowded?</label>
       </div>
-      <select class="form-select" id="crowded">
+      <select name='crowded' class="form-select" id="crowded">
         <option value=null>---Choose Option----</option>
         <option>Crowded</option>
         <option>Not Crowded</option>
@@ -47,7 +47,7 @@
       <div>
         <label>Are people wearing masks?</label>
       </div>
-      <select id='masks' class="form-select multiple" aria-label="Are people wearing masks?">
+      <select name='masks' id='masks' class="form-select multiple" aria-label="Are people wearing masks?">
         <option value=null>---Choose Option----</option>
         <option>Masks</option>
         <option>No Masks</option>
@@ -56,7 +56,7 @@
       <div>
         <label>Is there live entertainment?</label>
       </div>
-      <select id='entertainment' class="form-select multiple" aria-label="Is there live entertainment?">
+      <select name='entertainment' id='entertainment' class="form-select multiple" aria-label="Is there live entertainment?">
         <option value=null>---Choose Option----</option>
         <option>Yes</option>
         <option>No</option>
@@ -65,7 +65,7 @@
       <div>
         <label>Are there food and drink specials?</label>
       </div>
-      <select id='specials' class="form-select multiple" aria-label="Are there food and drink specials?">
+      <select name='specials' id='specials' class="form-select multiple" aria-label="Are there food and drink specials?">
         <option value=null>---Choose Option----</option>
         <option>Yes</option>
         <option>No</option>
@@ -74,7 +74,7 @@
       <div>
         <label>Are the restrooms clean?</label>
       </div>
-      <select id='quality' class="form-select multiple" aria-label="Are the restrooms clean?">
+      <select name="quality" id='quality' class="form-select multiple" aria-label="Are the restrooms clean?">
         <option value=null>---Choose Option----</option>
         <option value="Restrooms are sparkling clean">Yes</option>
         <option value='Restrooms are moderately clean'>Moderately</option>
@@ -84,7 +84,7 @@
       <br></br>
 
       <div class="form-floating">
-        <textarea id='comments' class="form-control" placeholder="Comments"
+        <textarea name="addComment" id='comments' class="form-control" placeholder="Comments"
           style="width: 95%; height: 75px; margin:auto; border-radius: 10px;">{{addComment}}</textarea>
         <label for="floatingTextarea"></label>
         <div class="add-post">

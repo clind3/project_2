@@ -17,26 +17,31 @@
   </div>
   <div id='signup' class="col-md-6">
     <h2>Signup</h2>
-    <form class="form signup-form">
+    {{#each errors}}
+    <div class='error'>
+      <p>{{text}}</p>
+    </div>
+    {{/each}}
+    <form action='/api/users' method='POST' class="form signup-form">
       <div class="form-group">
         <label for="username-signup">User Name:</label>
-        <input class="form-input" type="text" id="username-signup" />
+        <input class="form-input" placeholder="jsmith232"  type="text" id="username" value={{username}}>
       </div>
       <div class="form-group">
         <label for="first-name-signup">First Name</label>
-        <input class="form-input" type="text" id="first-name-signup" />
+        <input class="form-input" placeholder="John"  type="text" id="first_name" value={{first_name}}>
       </div>
       <div class="form-group">
         <label for="last-name-signup">Last Name</label>
-        <input class="form-input" type="text" id="last-name-signup" />
+        <input class="form-input" placeholder="Smith"  type="text" id="last_name" value={{last_name}}>
       </div>
       <div class="form-group">
         <label for="email-signup">Email:</label>
-        <input class="form-input" type="email" id="email-signup" />
+        <input class="form-input" placeholder="smith.john@email.com"  type="email" id="email" value={{email}}>
       </div>
       <div class="form-group">
         <label for="password-signup">Password</label>
-        <input class="form-input" type="password" id="password-signup" />
+        <input class="form-input" type="password" id="pw" />
       </div>
       <div class="form-group">
         <button type="submit" class="btn" >Sign Up</button>
@@ -44,4 +49,3 @@
     </form>
   </div>
 </div>
-<script src="../js/login.js"></script>

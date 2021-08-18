@@ -1,6 +1,12 @@
 <body>
   <div id='add-post-container'>
-    <form class="add-form">
+    <h2>Create Review Post</h2>
+    {{#each errors}}
+    <div class='error'>
+      <p>{{text}}</p>
+    </div>
+    {{/each}}
+    <form action="/api/posts" method="POST" class="add-form">
 
       <div>
         <label>Which business?</label>
@@ -70,16 +76,16 @@
       </div>
       <select id='quality' class="form-select multiple" aria-label="Are the restrooms clean?">
         <option value=null>---Choose Option----</option>
-        <option>Yes</option>
-        <option>Moderately</option>
-        <option>No</option>
+        <option value="Restrooms are sparkling clean">Yes</option>
+        <option value='Restrooms are moderately clean'>Moderately</option>
+        <option value="Restrooms are not the cleanest'">No</option>
       </select>
 
       <br></br>
 
       <div class="form-floating">
         <textarea id='comments' class="form-control" placeholder="Comments"
-          style="width: 80%; height: 75px; margin:auto;"></textarea>
+          style="width: 95%; height: 75px; margin:auto; border-radius: 10px;">{{addComment}}</textarea>
         <label for="floatingTextarea"></label>
         <div class="add-post">
           <button type="submit" class="btn btn-primary btn-lg" style="background-color: #FFBE86;
@@ -97,6 +103,3 @@
     </form>
   </div>
 </body>
-
-<script src="../js/add-post.js"></script>
-

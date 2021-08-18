@@ -12,7 +12,7 @@ Post.init(
             autoIncrement: true,
         },
         location: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.STRING,
         },
         stars: {
             type: DataTypes.INTEGER,

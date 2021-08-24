@@ -40,11 +40,15 @@ ul {
 #card-header {
   background-color: #546e4b;
   padding: 8px;
+  border-radius: 8px;
 }
 .card {
   background-color: var(--green) ;
-  padding: 5px;
-  margin: 5px;
+  border-radius: 8px;
+}
+
+.card-text {
+  padding-left: 10px;
 }
 #hello {
     text-align: center;

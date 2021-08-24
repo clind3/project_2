@@ -1,13 +1,15 @@
-<div style="display: inline-block;">
+<div style="display: inline-block; min-width: 300px; max-width: 300px; margin:auto;">
     <div class="column">
         <div class="card">
             <h3 id='card-header'>{{location}} {{stars}}/5</h3>
-            <p><i class="fa fa-users"></i> {{crowded}}</p>
-            <p>{{masks}}</p>
-            <p>{{entertainment}}</p>
-            <p>Restroom Quality: {{quality}}</p>
-            <p>{{specials}}</p>
-            <p>Comment: {{addComment}}</p>
+            {{!-- <main class='card-body'> --}}
+            <p class='card-text'><i class="fa fa-users"></i> {{crowded}}</p>
+            <p class="card-text"><i class="fa-solid fa-mask-face"></i>{{masks}}</p>
+            <p class="card-text">{{entertainment}}</p>
+            <p class="card-text">Restroom Quality: {{quality}}</p>
+            <p class="card-text">{{specials}}</p>
+            <p class="card-text" style= 'padding-bottom: 10px;'>Comment: {{addComment}}</p>
+            {{!-- </main> --}}
         </div>
     </div>
 </div>

@@ -57,7 +57,19 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/post', async (req, res) => {
-    res.render('post');
+    Business.findAll({
+        attributes: [
+            'id',
+            'name'
+        ]
+    }).then(dbBusinessData => {
+        const businesses = dbBusinessData.map(business => business.get({plain: true}));
+        res.render('post', {businesses});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
     
 });
 

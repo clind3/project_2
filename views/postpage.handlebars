@@ -1,7 +1,11 @@
 
-<body style="display: flex; flex-direction:column;">
+<body >
+    <div style="display: flex; flex-direction:row; flex-wrap:wrap; width:100%;">
    {{#each posts as |post|}}
 
     {{> post-info post }}
+    {{else}}
+    <p>Be the first to post! Review the restaurant or bar you are currently sitting in.</p>
     {{/each}}
+    </div>
 </body>

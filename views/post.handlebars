@@ -1,23 +1,26 @@
 <body>
-  <div id='add-post-container'>
+  <div id='add-post-container' style='margin-top: 15px; margin-bottom:15px;'>
     <h2>Create Review Post</h2>
     {{#each errors}}
     <div class='error'>
       <p>{{text}}</p>
     </div>
     {{/each}}
+    
+    
     <form action="/api/posts" method="POST" class="add-form">
 
+      {{!-- <option name='location' id='location'>{{name}}</option>
+    <option name='busId' id='busId'>{{id}}</option> --}}
       <div>
         <label>Which business?</label>
       </div>
-      <select name='location' class="form-select" id="location">
+      <select name ='location' class="form-select" id="location">
         <option value=null>---Choose Option----</option>
-        <option>Terrace Bar</option>
-        <option>Sacred Palm</option>
-        <option>Two Truths</option>
-        <option>High Bank Distillery</option>
-        <option>The Alibi Bourbon and Cocktail Lounge</option>
+       {{#each businesses as |business|}}
+
+        <option name='location'>{{name}}</option>
+      {{/each}}
       </select>
 
       <div>

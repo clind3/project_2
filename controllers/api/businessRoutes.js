@@ -19,4 +19,9 @@ router.get('/', async (req, res) => {
     console.log('POST HERE', req.body);
 });
 
+//create form where search info goes here
+router.get('/findB', async (req, res) => {
+    findRestList('columbus', 'bar');
+})
+
 module.exports = router;

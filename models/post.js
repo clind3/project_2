@@ -36,7 +36,7 @@ Post.init(
             type: DataTypes.STRING(100),
         },
         // busId: {
-        //     type: DataTypes.STRING(100),
+        //     type: DataTypes.STRING,
         //     allowNull: false,
         //     references: {
         //         model: 'BUSINESS',

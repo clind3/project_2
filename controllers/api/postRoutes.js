@@ -2,10 +2,10 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
-  let { location, stars, crowded, masks, entertainment, specials, quality, addComment } = req.body;
+  console.log(req.body);
+  let { location, stars, crowded, masks, entertainment, specials, quality, addComment} = req.body;
   let errors = [];
 
-  console.log(location);
 
   //Validation Fields
   if (location=='null') {
@@ -37,7 +37,8 @@ router.post('/', async (req, res) => {
       entertainment,
       specials,
       quality,
-      addComment
+      addComment,
+      // busId
     })
       .then(post => res.redirect('/seePost'))
       .catch(err => console.log(err));
